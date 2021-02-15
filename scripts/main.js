@@ -242,6 +242,7 @@ class sqlExercise extends HTMLElement {
       indentWithTabs: true,
       smartIndent: true,
       lineNumbers: true,
+      lineWrapping: true,
       textWrapping: false,
       autoRefresh: true,
       theme: 'neat',

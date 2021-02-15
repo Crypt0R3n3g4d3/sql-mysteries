@@ -56,51 +56,12 @@
     <script>
         window.onload = () => loadData('sql-murder-mystery.db');
     </script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-27829802-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-27829802-1');
-    </script>
     <title>The SQL Murder Mystery</title>
 </head>
 
 <body>
     <nav id="navbar-product-top" class="navbar navbar-dark">
-        <ul>
-            <li class="logo">
-                <a href="http://knightlab.com">
-                    <img src="https://cdn.knightlab.com/libs/orangeline/0.1.1/assets/knightlab-dark.png" />
-                </a>
-            </li>
-        </ul>
-        <div class="nav-mobile-menu">
-            <button class="button-plain">
-        <span class="icon-menu"></span>
-      </button>
-        </div>
-        <ul class="nav-right navbar-nav">
-
-
-            <li><a class="button button-dark button-small-tablet  button-active" href="https://knightlab.northwestern.edu/projects/">Projects</a></li>
-
-            <li><a class="button button-dark button-small-tablet  " href="https://studio.knightlab.com/">Studio</a></li>
-
-            <li><a class="button button-dark button-small-tablet  " href="https://localnewsinitiative.northwestern.edu/">Local
-          News</a></li>
-
-            <li><a class="button button-dark button-small-tablet  " href="https://knightlab.northwestern.edu/posts/">Posts</a>
-            </li>
-
-            <li><a class="button button-dark button-small-tablet  " href="https://knightlab.northwestern.edu/community/">Community</a></li>
-
-        </ul>
     </nav>
 
     <header class="header-product">
@@ -111,77 +72,19 @@
     </header>
 
     <div class="container">
-
-        <div id="intro" class="grid">
-            <div class="grid-item">
-                <img src="174092-clue-illustration.png" class="img-rounded" alt="A decorative illustration of a detective looking at an evidence board.">
-                <p>
-                    There's been a Murder in SQL City! The SQL Murder Mystery is designed to be both a self-directed lesson to learn SQL concepts and commands and a fun game for experienced SQL users to solve an intriguing crime.
-                </p>
-            </div>
-        </div>
-
         <div class="grid">
             <div class="grid-item">
-                <h2>New to SQL?</h2>
-                <p>
-                    This exercise is meant more as a way to practice SQL skills than a full tutorial. If you've never used SQL at all, <a href="walkthrough.html">try the walkthrough</a>. If you really want to learn a lot about SQL, you may prefer a complete
-                    tutorial like <a href="https://selectstarsql.com/">Select Star SQL.</a>
-
-                </p>
-                <p>If you're comfortable with SQL, you can <a href="#experienced">dive in below</a>!</p>
-            </div>
-        </div>
-
-
-        <div class="grid">
-            <div class="grid-item">
-                <h2 id="experienced">Experienced SQL sleuths start here</h2>
+                <h2 id="experienced">Start Here</h2>
                 <p>
                     A crime has taken place and the detective needs your help. The detective gave you the crime scene report, but you somehow lost it. You vaguely remember that the crime was a <strong>​murder​</strong> that occurred sometime on ​<strong>Jan.15, 2018​</strong>                    and that it took place in ​<strong>SQL City​</strong>. Start by retrieving the corresponding crime scene report from the police department’s database.
                 </p>
-
-                <h3>Exploring the Database Structure</h3>
-
-                <p>
-                    Experienced SQL users can often use database queries to infer the structure of a database. But each database system has different ways of managing this information. The SQL Murder Mystery is built using SQLite. Use this SQL command to find the tables
-                    in the Murder Mystery database.
-                </p>
-
-                <sql-exercise data-question="Run this query to find the names of the tables in this database." data-comment="This command is specific to SQLite. For other databases, you'll have to learn their specific syntax." data-default-text="SELECT name 
-  FROM sqlite_master
- where type = 'table'"></sql-exercise>
-
             </div>
         </div>
-
-        <div class="grid">
-            <div class="grid-item">
-                <p>
-                    Besides knowing the table names, you need to know how each table is structured. The way this works is also dependent upon which database technology you use. Here's how you do it with SQLite.
-                </p>
-
-                <sql-exercise data-question="Run this query to find the structure of the `crime_scene_report` table" data-comment="Change the value of 'name' to see the structure of the other tables you learned about with the previous query." data-default-text="SELECT sql 
-  FROM sqlite_master
- where name = 'crime_scene_report'"></sql-exercise>
-
-            </div>
-        </div>
-
 
         <div class="grid">
             <div class="grid-item">
                 <h3>The rest is up to you!</h3>
-                <p>
-                    If you're really comfortable with SQL, you can probably get it from here.
-                </p>
-                <p>
-                    But <a id="show-schema">click here</a> to show the schema diagram.
-                    <img id="experienced-schema" src="schema.png" width='1002' height='491'>
-                </p>
-                <p>
-                    And you can always go to the <a href="walkthrough.html">walkthrough</a>.
-                </p>
+                <img id="experienced-schema" class="show" src="schema.png" width='1002' height='491'>
 
                 <sql-exercise data-question="Use your knowledge of the database schema and SQL commands to find out who committed the murder." data-comment="When you think you know the answer, go to the next section." data-default-text="
               
@@ -205,7 +108,7 @@
 
         <div id="credits" class="grid">
             <div class="grid-item">
-                <h3>Credits</h3>
+                <h3>Credits Forked From:</h3>
                 <p>The SQL Murder Mystery was created by <a href="https://twitter.com/joonparkmusic">Joon Park</a> and <a href="https://twitter.com/Cathy_MeiyingHe">Cathy He</a> while they were Knight Lab fellows. See the <a href="https://github.com/NUKnightLab/sql-mysteries">GitHub repository</a>                    for more information.</p>
                 <p>Adapted and produced for the web by <a href="https://twitter.com/joegermuska">Joe Germuska</a>.</p>
                 <p>This mystery was inspired by <a href="https://github.com/veltman/clmystery">a crime in the neighboring
@@ -282,12 +185,6 @@
     </footer>
 
     <script src="https://cdn.knightlab.com/libs/orangeline/0.1.1/js/orangeline.js"></script>
-    <script type="text/javascript">
-        document.querySelector('#show-schema').addEventListener('click', function() {
-            document.querySelector('#experienced-schema').classList.add('show');
-        })
-    </script>
-
 </body>
 
 </html>

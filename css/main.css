@@ -122,10 +122,6 @@ sql-exercise .sqlExInputArea input {
     font-weight: 200;
 }
 
-#experienced-schema {
-    display: none;
-}
-
 #experienced-schema.show {
     display: block;
 }
